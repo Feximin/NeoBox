@@ -1,0 +1,6 @@
+<resources>
+
+    <dimen name="default_title_bar_height">46dp</dimen>
+    <dimen name="default_navigation_height">50dp</dimen>
+
+</resources>
