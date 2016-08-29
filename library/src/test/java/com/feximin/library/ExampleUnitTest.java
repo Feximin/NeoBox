@@ -1,4 +1,4 @@
-package com.feximin.library;
+package com.feximin.box;
 
 import org.junit.Test;
 

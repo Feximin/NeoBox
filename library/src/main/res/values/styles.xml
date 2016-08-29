@@ -1,0 +1,918 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Translucent" parent="style_dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@color/_20_000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_right_left_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_right_left_out_30p</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_left_right_in_30p</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_left_right_out</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="style_main">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/bg</item>
+    </style>
+
+    <style name="style_main_white" parent="style_main">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="style_img_w_w">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="style_img_emotion" parent="style_img_w_w">
+    </style>
+
+    <style name="style_img_w_cc" parent="style_img_w_w">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="style_img_back" parent="style_img_48dp">
+        <item name="android:background">@drawable/selector_transparent_ddd</item>
+        <item name="android:src">@mipmap/img_back</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="style_img_48dp" parent="style_img_w_w">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+    <style name="style_img_50dp" parent="style_img_w_w">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="style_img_42dp" parent="style_img_w_w">
+        <item name="android:layout_width">42dp</item>
+        <item name="android:layout_height">42dp</item>
+    </style>
+    <style name="style_img_42dp_cc" parent="style_img_42dp">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="style_img_24dp" parent="style_img_w_w">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+    </style>
+    <style name="style_img_100dp" parent="style_img_w_w">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">100dp</item>
+    </style>
+
+    <style name="style_img_16dp" parent="style_img_w_w">
+        <item name="android:layout_width">16dp</item>
+        <item name="android:layout_height">16dp</item>
+    </style>
+
+    <style name="style_img_40dp" parent="style_img_w_w">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="style_img_40dp_circle" parent="style_img_40dp">
+        <item name="android:background">@drawable/shape_bg_circle_eee_padding_1px</item>
+    </style>
+    <style name="style_img_40dp_cc" parent="style_img_40dp">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    <style name="style_img_45dp" parent="style_img_w_w">
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">45dp</item>
+    </style>
+
+    <style name="style_img_32dp" parent="style_img_w_w">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">32dp</item>
+    </style>
+    <style name="style_img_32dp_cc" parent="style_img_32dp">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="style_img_36dp" parent="style_img_w_w">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+    </style>
+
+    <style name="style_img_30dp" parent="style_img_w_w">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">30dp</item>
+    </style>
+
+    <style name="style_img_75dp" parent="style_img_w_w">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">75dp</item>
+    </style>
+    <style name="style_img_120dp" parent="style_img_w_w">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+    </style>
+
+    <style name="style_img_75dp_cc" parent="style_img_75dp">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="style_img_65dp_center_crop" parent="style_img_75dp_cc">
+        <item name="android:layout_width">65dp</item>
+        <item name="android:layout_height">65dp</item>
+    </style>
+
+    <style name="style_img_70dp_center_crop" parent="style_img_75dp_cc">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+    </style>
+
+    <style name="style_img_60dp" parent="style_img_w_w">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+
+    <style name="style_img_0_wrap_weight_1" parent="style_img_w_w">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="style_img_48dp_48dp_padding_5dp" parent="style_img_48dp">
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="style_img_80dp" parent="style_img_w_w">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+    </style>
+
+    <style name="style_img_80dp_cc" parent="style_img_80dp">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="style_img_90dp_90dp" parent="style_img_w_w">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_height">90dp</item>
+    </style>
+
+    <style name="style_img_48dp_cc" parent="style_img_48dp">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    <style name="style_img_50dp_center_crop" parent="style_img_50dp">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="style_img_m_m" parent="style_img_w_w">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="style_img_m_cc" parent="style_img_m_m">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="style_img_m_w_cc" parent="style_img_m_cc">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="style_img_m_w_ci" parent="style_img_m_w_cc">
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="style_img_60dp_60dp" parent="style_img_w_w">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
+
+    <style name="style_img_60dp_cc" parent="style_img_60dp_60dp">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="style_tab_item">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@drawable/selector_color_fff_999</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="style_tab_item_2">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/selector_tab_item</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="style_line_match_1px_e9">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/gray_e9</item>
+    </style>
+
+    <style name="style_line_match_1px_e9_margin_l_r_8dp" parent="style_line_match_1px_e9">
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+
+    <style name="style_line_match_1px_e0">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/gray_e0</item>
+    </style>
+
+    <style name="style_line_match_1px_e0_margin_l_r_8dp" parent="style_line_match_1px_e0">
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_marginRight">8dp</item>
+    </style>
+
+    <style name="style_line_match_1px_ccc">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/ccc</item>
+    </style>
+
+    <style name="style_line_1px_match_e0">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/gray_e0</item>
+    </style>
+
+    <style name="style_line_1dp_match_e0">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/gray_e0</item>
+    </style>
+
+    <style name="style_line_m_1dp_primary">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/primary</item>
+    </style>
+
+    <style name="style_line_1dp_match_aaa">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/aaa</item>
+    </style>
+
+    <style name="style_line_1px_match_e9" parent="style_line_1px_match_e0">
+        <item name="android:background">@color/gray_e9</item>
+    </style>
+
+    <style name="style_line_1dp_m_fff" parent="style_line_1dp_match_aaa">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="style_divider">
+        <item name="android:layout_width">1.5dp</item>
+        <item name="android:layout_height">13sp</item>
+        <item name="android:layout_marginLeft">6dp</item>
+        <item name="android:layout_marginRight">6dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:background">@color/ccc</item>
+    </style>
+
+    <style name="style_classify_divider">
+        <item name="android:layout_width">2dp</item>
+        <item name="android:layout_height">13sp</item>
+        <item name="android:layout_marginRight">4dp</item>
+        <item name="android:background">@color/red</item>
+    </style>
+
+    <style name="style_txt_tag">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#ee7907</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_wrap_wrap_16sp_white_single_line">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_w_w">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_txt_w_w_16sp_333_sl" parent="style_txt_wrap_wrap_16sp_white_single_line">
+        <item name="android:textColor">@color/black_333</item>
+    </style>
+
+    <style name="style_txt_w_w_16sp_777" parent="style_txt_w_w_16sp_333_sl">
+        <item name="android:textColor">@color/black_777</item>
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="style_txt_w_w_18sp_111" parent="style_txt_w_w_16sp_777">
+        <item name="android:textColor">@color/black_111</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="style_txt_w_w_18sp_fff" parent="style_txt_w_w_18sp_111">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="style_txt_wrap_wrap_16sp_333" parent="style_txt_w_w_16sp_333_sl">
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="style_txt_w_w_15sp_777" parent="style_txt_wrap_wrap_16sp_333">
+        <item name="android:textColor">@color/black_777</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="style_txt_w_w_14sp_777" parent="style_txt_w_w_15sp_777">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="style_txt_w_w_15sp_primary" parent="style_txt_w_w_15sp_777">
+        <item name="android:textColor">@color/primary</item>
+    </style>
+    <style name="style_txt_m_w_15sp_primary" parent="style_txt_w_w_15sp_primary">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="style_txt_w_w_16sp_primary" parent="style_txt_w_w_15sp_primary">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="style_txt_m_w_16sp_primary" parent="style_txt_w_w_16sp_primary">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="style_txt_w_w_18sp_primary" parent="style_txt_w_w_15sp_primary">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="style_txt_m_w_18sp_primary" parent="style_txt_w_w_18sp_primary">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="style_txt_w_w_17sp_primary" parent="style_txt_w_w_15sp_primary">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="style_txt_m_w_17sp_primary" parent="style_txt_w_w_17sp_primary">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="style_txt_w_w_14sp_111" parent="style_txt_w_w_15sp_777">
+        <item name="android:textColor">@color/black_111</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="style_txt_w_w_14sp_111_sl" parent="style_txt_w_w_14sp_111">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_w_w_14sp_primary" parent="style_txt_w_w_14sp_111">
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="style_txt_m_w_14sp_111" parent="style_txt_w_w_14sp_111">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="style_txt_m_w_14sp_666" parent="style_txt_m_w_14sp_111">
+        <item name="android:textColor">@color/black_666</item>
+    </style>
+
+    <style name="style_txt_m_w_14sp_black" parent="style_txt_m_w_14sp_111">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="style_txt_m_w_14sp_666_sl" parent="style_txt_m_w_14sp_666">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_w_w_14sp_999" parent="style_txt_w_w_14sp_111">
+        <item name="android:textColor">@color/black_999</item>
+    </style>
+
+    <style name="style_txt_w_w_14sp_666" parent="style_txt_w_w_14sp_111">
+        <item name="android:textColor">@color/black_666</item>
+    </style>
+
+    <style name="style_txt_w_w_12sp_fff" parent="style_txt_w_w_15sp_777">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="style_txt_w_w_11sp_fff" parent="style_txt_w_w_12sp_fff">
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="style_txt_w_w_10sp_fff" parent="style_txt_w_w_12sp_fff">
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="style_txt_w_w_10sp_fff_sl" parent="style_txt_w_w_10sp_fff">
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="style_txt_w_w_11sp_fff_sl" parent="style_txt_w_w_11sp_fff">
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="style_txt_w_w_11sp_eee_sl" parent="style_txt_w_w_11sp_fff_sl">
+        <item name="android:textColor">@color/eee</item>
+    </style>
+    <style name="style_txt_w_w_12sp_fff_sl" parent="style_txt_w_w_12sp_fff">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_w_w_12sp_999" parent="style_txt_w_w_12sp_fff">
+        <item name="android:textColor">@color/black_999</item>
+    </style>
+    <style name="style_txt_w_w_12sp_999_sl" parent="style_txt_w_w_12sp_999">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_w_w_11sp_999" parent="style_txt_w_w_12sp_999">
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="style_txt_w_w_10sp_999" parent="style_txt_w_w_12sp_999">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="style_txt_w_w_13sp_fff" parent="style_txt_w_w_12sp_fff">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="style_txt_m_w_13sp_fff" parent="style_txt_w_w_13sp_fff">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="style_txt_m_w_13sp_bbb" parent="style_txt_m_w_13sp_fff">
+        <item name="android:textColor">@color/bbb</item>
+    </style>
+
+    <style name="style_txt_m_w_13sp_333" parent="style_txt_m_w_13sp_fff">
+        <item name="android:textColor">@color/black_333</item>
+    </style>
+
+    <style name="style_txt_m_w_13sp_primary" parent="style_txt_m_w_15sp_primary">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="style_txt_sec_divider" parent="style_txt_w_w_13sp_777">
+        <item name="android:drawableLeft">@drawable/shape_3x15sp_primary</item>
+        <item name="android:drawableStart">@drawable/shape_3x15sp_primary</item>
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="style_txt_m_w_13sp_333_sl" parent="style_txt_m_w_13sp_333">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_w_w_13sp_fff_sl" parent="style_txt_w_w_13sp_fff">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_m_w_16sp_fff" parent="style_txt_w_w_12sp_fff">
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="style_txt_m_w_16sp_fff_sl" parent="style_txt_m_w_16sp_fff">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_m_w_15sp_fff" parent="style_txt_m_w_16sp_fff">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="style_txt_w_m_15sp_fff" parent="style_txt_w_w_15sp_fff">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="style_txt_w_m_14sp_fff" parent="style_txt_w_m_15sp_fff">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="style_txt_w_m_14sp_ddd" parent="style_txt_w_m_14sp_fff">
+        <item name="android:textColor">@color/ddd</item>
+    </style>
+
+    <style name="style_txt_w_w_15sp_fff" parent="style_txt_m_w_15sp_fff">
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="style_txt_w_w_14sp_fff" parent="style_txt_w_w_15sp_fff">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="style_txt_m_w_14sp_fff" parent="style_txt_w_w_14sp_fff">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="style_txt_m_w_14sp_fff_sl" parent="style_txt_m_w_14sp_fff">
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="style_txt_m_w_14sp_333" parent="style_txt_m_w_14sp_fff">
+        <item name="android:textColor">@color/black_333</item>
+    </style>
+    <style name="style_txt_m_w_14sp_333_sl" parent="style_txt_m_w_14sp_333">
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="style_txt_w_w_14sp_333_sl" parent="style_txt_m_w_14sp_333_sl">
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="style_txt_w_w_13sp_111" parent="style_txt_w_w_13sp_fff">
+        <item name="android:textColor">@color/black_111</item>
+    </style>
+
+    <style name="style_txt_w_w_15sp_555" parent="style_txt_w_w_15sp_777">
+        <item name="android:textColor">@color/black_555</item>
+    </style>
+    <style name="style_txt_w_w_15sp_555_sl" parent="style_txt_w_w_15sp_555">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_m_w_15sp_555" parent="style_txt_w_w_15sp_555">
+        <item name="android:textColor">@color/black_555</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="style_txt_w_w_12sp_555" parent="style_txt_w_w_12sp_777">
+        <item name="android:textColor">@color/black_777</item>
+    </style>
+    <style name="style_txt_w_w_12sp_555_sl" parent="style_txt_w_w_12sp_555">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_m_w_15sp_555_sl" parent="style_txt_m_w_15sp_555">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_w_w_15sp_333" parent="style_txt_w_w_15sp_777">
+        <item name="android:textColor">@color/black_333</item>
+    </style>
+    <style name="style_txt_m_w_15sp_333" parent="style_txt_w_w_15sp_333">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="style_txt_m_w_15sp_333_sl" parent="style_txt_m_w_15sp_333">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_w_w_14sp_333" parent="style_txt_w_w_15sp_333">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="style_txt_w_w_15sp_green" parent="style_txt_w_w_15sp_777">
+        <item name="android:textColor">@color/green1</item>
+    </style>
+
+    <style name="style_txt_w_w_16sp_333" parent="style_txt_w_w_15sp_333">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="style_txt_w_w_16sp_red" parent="style_txt_w_w_16sp_333">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="style_txt_m_w_16sp_333" parent="style_txt_w_w_16sp_333">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+    <style name="style_txt_m_w_16sp_333_sl" parent="style_txt_m_w_16sp_333">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_w_w_15sp_red" parent="style_txt_w_w_15sp_333">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="style_txt_w_w_13sp_red" parent="style_txt_w_w_15sp_red">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="style_txt_m_m_15sp_333" parent="style_txt_w_w_15sp_333">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="style_txt_m_m_15sp_333_sl" parent="style_txt_m_m_15sp_333">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_m_m_14sp_333_sl" parent="style_txt_m_m_15sp_333_sl">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="style_txt_w_w_15sp_333_sl" parent="style_txt_w_w_15sp_333">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_w_w_15sp_fff_sl" parent="style_txt_w_w_15sp_333">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="style_txt_w_w_15sp_666" parent="style_txt_w_w_15sp_777">
+        <item name="android:textColor">@color/black_666</item>
+    </style>
+    <style name="style_txt_m_w_15sp_666" parent="style_txt_w_w_15sp_666">
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="style_txt_w_w_13sp_777_sl" parent="style_txt_w_w_15sp_333_sl">
+        <item name="android:textColor">@color/black_777</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="style_txt_w_w_12sp_777_sl" parent="style_txt_w_w_13sp_777_sl">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="style_txt_w_w_13sp_333" parent="style_txt_w_w_15sp_333">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="style_txt_w_w_13sp_333_sl" parent="style_txt_w_w_13sp_333">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_w_w_13sp_777" parent="style_txt_w_w_13sp_777_sl">
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="style_txt_w_w_12sp_777" parent="style_txt_w_w_13sp_777">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="style_txt_w_w_12sp_primary" parent="style_txt_w_w_13sp_primary">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="style_txt_wrap_wrap_17sp_black_single_line" parent="style_txt_wrap_wrap_16sp_white_single_line">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="style_txt_wrap_wrap_13sp_white_single_line" parent="style_txt_wrap_wrap_16sp_white_single_line">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="style_txt_w_w_13sp_primary" parent="style_txt_w_w">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+    <style name="style_txt_w_m_13sp_primary" parent="style_txt_w_w_13sp_primary">
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="style_txt_w_w_13sp_primary_sl" parent="style_txt_w_w_13sp_primary">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_w_w_13sp_999" parent="style_txt_w_w_13sp_primary">
+        <item name="android:textColor">@color/black_999</item>
+    </style>
+
+    <style name="style_txt_wrap_wrap_13sp_777_single_line" parent="style_txt_wrap_wrap_13sp_white_single_line">
+        <item name="android:textColor">@color/black_777</item>
+    </style>
+
+    <style name="style_txt_wrap_wrap_13sp_777" parent="style_txt_wrap_wrap_13sp_777_single_line">
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="style_txt_tag_author" parent="style_txt_tag">
+        <item name="android:textColor">@color/black_777</item>
+    </style>
+
+    <style name="style_txt_browser_count" parent="style_txt_tag">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="style_mask_match_match_30_000">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/_30_000000</item>
+    </style>
+
+    <style name="style_line_match_1dp_e0">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/gray_e0</item>
+    </style>
+
+    <style name="style_txt_picture_picker">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/selector_fff_f6</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:textColor">#000a1b</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="style_edit">
+        <item name="android:textColorHint">@color/black_999</item>
+        <item name="android:textColor">@color/black_333</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="style_edit_no_bg" parent="style_edit">
+        <item name="android:background">@null</item>
+    </style>
+    <style name="style_edit_no_bg_sl" parent="style_edit_no_bg">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_edit_m_m_14sp_no_bg" parent="style_edit">
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="style_edit_m_w_14sp_no_bg" parent="style_edit_m_m_14sp_no_bg">
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="style_edit_m_w_15sp_no_bg" parent="style_edit_m_w_14sp_no_bg">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="style_edit_m_w_14sp_no_bg_sl" parent="style_edit_m_w_14sp_no_bg">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_edit_m_w_14sp_fff_f6_sl" parent="style_edit_m_w_14sp_no_bg_sl">
+        <item name="android:background">@drawable/selector_fff_f6</item>
+    </style>
+
+    <style name="style_edit_m_w_15sp_fff_f6_sl" parent="style_edit_m_w_14sp_fff_f6_sl">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="style_edit_m_m_14sp_no_bg_sl" parent="style_edit_m_m_14sp_no_bg">
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="TabLayoutTextAppearance_19sp">
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="TabLayoutTextAppearance_17sp">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="style_scroll_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fillViewport">true</item>
+        <item name="android:fadingEdgeLength">0dp</item>
+    </style>
+
+    <style name="style_sv_no_bar" parent="style_scroll_view">
+        <item name="android:scrollbars">none</item>
+    </style>
+
+    <style name="style_layout_m">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="style_layout_w">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_layout_m_w">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="style_layout_m_m_v" parent="style_layout_m">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="style_layout_m_w_v" parent="style_layout_m_w">
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="style_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item> <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item> <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item> <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item> <!-- 无标题 -->
+        <item name="android:windowBackground">@color/transparent</item> <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item> <!-- 模糊 -->
+    </style>
+
+    <style name="style_dialog_anim" parent="@android:style/Theme.Dialog">
+        <item name="@android:windowEnterAnimation">@anim/anim_dialog_in</item> <!-- //进入时的动画 -->
+        <item name="@android:windowExitAnimation">@anim/anim_dialog_out</item> <!-- //退出时的动画 -->
+    </style>
+
+    <style name="style_dialog_anim_fade" parent="@android:style/Theme.Dialog">
+        <item name="@android:windowEnterAnimation">@anim/anim_fade_in</item> <!-- //进入时的动画 -->
+        <item name="@android:windowExitAnimation">@anim/anim_fade_out</item> <!-- //退出时的动画 -->
+    </style>
+
+    <style name="style_txt_bottom_ok_but" parent="style_txt_m_w_15sp_fff">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@drawable/selector_primary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+
+    <style name="style_txt_m_50dp_15sp_sl">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="style_txt_m_50dp_15sp_fff_bg_red_sl" parent="style_txt_m_50dp_15sp_sl">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/selector_red_ns</item>
+    </style>
+
+
+    <style name="style_mask">
+        <item name="android:id">@id/mask</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/_50000</item>s
+    </style>
+
+    <style name="style_txt_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="style_txt_title_menu">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/selector_transparent_ddd</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">50dp</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+        <item name="android:textColor">@drawable/selector_color_primary_999_s</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+
+
+    <style name="style_progressbar_small" parent="@android:style/Widget.ProgressBar.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:indeterminateDrawable">@drawable/drawable_progressbar</item>
+        <item name="android:indeterminateDuration">1000</item>
+        <item name="android:indeterminateOnly">true</item>
+    </style>
+
+    <style name="style_list_view_m">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:divider">@color/eee</item>
+        <item name="android:dividerHeight">1px</item>
+        <item name="android:listSelector">@drawable/selector_transparent</item>
+    </style>
+
+    <style name="style_img_list_view_empty_hint" parent="style_img_m_m">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_marginBottom">@dimen/title_bar_height</item>
+        <item name="android:layout_marginTop">@dimen/title_bar_height</item>
+        <item name="android:visibility">gone</item>
+    </style>
+</resources>

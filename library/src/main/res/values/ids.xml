@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tag_position" type="id"/>
+    <item name="tag_type" type="id"/>
+    <item name="swipe_refresh_layout" type="id" />
+    <item name="container_fragment" type="id" />
+    <item name="nav_view" type="id" />
+    <item name="mask" type="id" />
+    <item name="tab_layout" type="id" />
+    <item name="container_content" type="id" />
+</resources>

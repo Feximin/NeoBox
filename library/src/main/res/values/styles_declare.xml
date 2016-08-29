@@ -1,0 +1,158 @@
+<resources>
+
+    <attr name="dot_color" format="color" />
+    <attr name="dot_radius" format="dimension" />
+
+    <attr name="txt_color" format="color" />
+    <attr name="txt_size" format="dimension" />
+    <attr name="txt_text" format="string|reference" />
+    <attr name="indicator_color" format="reference|color" />
+    <attr name="ratio" format="float" />
+    <attr name="border_width" format="dimension" />
+    <attr name="border_color" format="color" />
+    <attr name="overlay_color" format="color" />
+    <attr name="progress_color" format="color" />
+    <declare-styleable name="TitleBar">
+        <attr name="left_src" format="reference" />
+        <attr name="right_src" format="reference" />
+        <attr name="title_text" format="string|reference" />
+        <attr name="right_text" format="string|reference" />
+        <attr name="left_text" format="string|reference" />
+        <attr name="show_line" format="boolean" />
+        <attr name="status_bar_color" format="color" />
+        <attr name="show_right_dot" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="Dot">
+        <attr name="dot_radius" />
+        <attr name="dot_color" />
+    </declare-styleable>
+
+    <declare-styleable name="TextConfirmView">
+        <attr name="confirm_content" format="string|reference" />
+        <attr name="ok_text" format="string|reference" />
+        <attr name="cancel_text" format="string|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DividerView">
+        <attr name="indicator_color" />
+        <attr name="indicator_text_color" format="color" />
+        <attr name="indicator_text" format="string|reference" />
+    </declare-styleable>
+    <declare-styleable name="DotTextView">
+        <attr name="dot_radius" />
+        <attr name="dot_color" />
+        <attr name="txt_color" />
+        <attr name="txt_size" />
+        <attr name="txt_text" />
+        <attr name="txt_left_margin" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TabItemView">
+        <attr name="txt_color" />
+        <attr name="txt_size" />
+        <attr name="txt_text" />
+        <attr name="img_src" format="reference" />
+        <attr name="fragment_name" format="string" />
+    </declare-styleable>
+    <declare-styleable name="LoginEditText">
+        <attr name="left_icon" format="reference" />
+        <attr name="edit_gravity" format="enum">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+        </attr>
+        <attr name="edit_background" format="reference" />
+        <attr name="edit_hint_text" format="string|reference" />
+        <attr name="edit_type">
+            <enum name="code" value="0" />
+            <enum name="password" value="1" />
+            <enum name="phone" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="BannerPager">
+        <attr name="indicator_gravity">
+            <enum name="left" value="0" />
+            <enum name="center" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+        <attr name="indicator_res_id" format="reference" />
+        <attr name="show_indicator" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ImageBed">
+        <attr name="gap_width" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleProgress">
+        <attr name="outer_border_color" format="color" />
+        <attr name="outer_border_width" format="dimension" />
+        <attr name="progress_color" />
+        <attr name="progress_width" format="dimension" />
+        <attr name="progress_backdrop" format="color" />
+        <attr name="border_gap" format="dimension" />
+        <attr name="backdrop" format="color" />
+        <attr name="clockwise" format="boolean" />
+        <attr name="start_angle" format="float" />
+        <attr name="mode">
+            <enum name="none" value="0" />
+            <enum name="text" value="1" />
+            <enum name="image" value="2" />
+        </attr>
+        <attr name="android:max" />
+        <attr name="android:progress" />
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:src" />
+    </declare-styleable>
+    <!--<declare-styleable name="NListView">-->
+    <!--<attr name="auto_load_more" format="boolean"/>-->
+    <!--<attr name="refreshable" format="boolean"/>-->
+    <!--<attr name="load_more_layout" format="reference"/>-->
+    <!--</declare-styleable>-->
+    <declare-styleable name="SquareViewBed">
+        <attr name="android:numColumns" />
+        <attr name="spacing" format="dimension" />
+        <attr name="keepMinHeight" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RatioImageView">
+        <attr name="ratio" />
+    </declare-styleable>
+    <declare-styleable name="RatioRelativeLayout">
+        <attr name="ratio" />
+    </declare-styleable>
+    <declare-styleable name="NeoImageView">
+        <attr name="shape" format="enum">
+            <enum name="rect" value="0" />
+            <enum name="circle" value="1" />
+        </attr>
+        <attr name="border_width" />
+        <attr name="border_color" />
+        <attr name="overlay_color" />
+        <attr name="corner" format="dimension" />
+        <attr name="ratio" />
+    </declare-styleable>
+
+    <declare-styleable name="RatioSpace">
+        <attr name="ratio" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ProgressButton">
+        <attr name="progress_color" />
+        <attr name="progress_background_color" format="color" />
+        <attr name="corner_radius" format="dimension" />
+        <attr name="android:textSize" />
+        <attr name="android:textColor" />
+        <attr name="android:text" />
+    </declare-styleable>
+
+    <declare-styleable name="NavigationView">
+        <attr name="containerId" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="OverlayImageView">
+        <attr name="overlay_color" />
+    </declare-styleable>
+</resources>

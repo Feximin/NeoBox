@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:id="@+id/mask"
+        style="@style/style_mask_match_match_30_000" />
+
+    <LinearLayout
+        android:id="@+id/container_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/style_txt_w_w_13sp_333"
+            android:layout_margin="12dp"
+            android:gravity="center"
+            android:text="@string/click_record" />
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="@drawable/shape_circle_fff_stroke_aaa">
+
+            <ImageView
+                android:id="@+id/iv_controller"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:src="@drawable/selector_circle_red"/>
+
+        </RelativeLayout>
+
+        <View
+            style="@style/style_line_match_1px_e0"
+            android:layout_marginTop="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                style="@style/style_txt_w_w_14sp_primary"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_fff_f6"
+                android:gravity="center"
+                android:text="@string/cancel" />
+
+            <View style="@style/style_line_1px_match_e0" />
+
+            <TextView
+                android:id="@+id/tv_ok"
+                style="@style/style_txt_w_w_14sp_primary"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_fff_f6"
+                android:gravity="center"
+                android:text="@string/ok" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</merge>

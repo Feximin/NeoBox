@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.feximin.box.view.SwipeRefreshLayoutCompat
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.feximin.box.view.NListView
+            android:id="@+id/listview"
+            style="@style/style_list_view_m" />
+    </com.feximin.box.view.SwipeRefreshLayoutCompat>
+
+    <ImageView
+        android:id="@+id/img_empty_hint"
+        style="@style/style_img_list_view_empty_hint" />
+</RelativeLayout>

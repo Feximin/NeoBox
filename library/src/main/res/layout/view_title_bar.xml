@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp">
+
+    <ImageButton
+        android:id="@+id/but_title_bar_left"
+        style="@style/style_img_back"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txt_title_bar_left"
+        style="@style/style_txt_title_menu"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="gone"
+        tools:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/txt_title_bar_title"
+        style="@style/style_txt_title"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="@string/app_name"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/but_title_bar_right"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/selector_transparent_ddd"
+        android:padding="5dp"
+        android:visibility="gone" />
+
+    <com.feximin.box.view.Dot
+        android:id="@+id/dot_title_bar_right"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="6dp"
+        android:visibility="gone"
+        app:dot_color="@color/red" />
+
+    <TextView
+        android:id="@+id/txt_title_bar_right"
+        style="@style/style_txt_title_menu"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/app_name"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/line_title_bar"
+        style="@style/style_line_match_1px_e0"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_title_bar_center"
+        style="@style/style_img_w_w"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/selector_fff_f6"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp">
+
+    <TextView
+        android:id="@+id/txt_title"
+        style="@style/style_txt_w_w_15sp_333"
+        android:layout_centerVertical="true"
+        android:drawablePadding="8dp"
+        tools:text="我的军团" />
+
+    <com.mianmian.guild.view.Dot
+        android:id="@+id/dot"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txt_right"
+        style="@style/style_txt_w_w_15sp_red"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        tools:text="我的MM币：12,345" />
+
+
+    <ImageView
+        android:id="@+id/img_right_arrow"
+        style="@style/style_img_40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="12dp"
+        android:src="@mipmap/img_arrow_right" />
+
+    <ImageView
+        android:id="@+id/img_toggle"
+        style="@style/style_img_w_w"
+        android:layout_width="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/selector_toggle" />
+
+</RelativeLayout>
